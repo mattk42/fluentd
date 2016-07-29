@@ -1,0 +1,18 @@
+if [ -n "$INLFUX_HOST" ]
+then
+
+cat << EOF >> $FLUENTD_CONF 
+<store>
+  type influxdb
+  host $INFLUX_HOST
+  port $INFLUX_PORT
+  dbname $INFLUX_DB
+  user  $INFLUX_USER
+  password  $INFLUX_PASSWORD
+  use_ssl true
+  time_precision s
+  sequence_tag _seq
+</store>
+EOF
+
+fi
