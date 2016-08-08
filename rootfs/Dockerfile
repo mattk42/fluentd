@@ -18,6 +18,7 @@ RUN apt-get update \
   && fluent-gem install --no-document fluent-plugin-elasticsearch \
   && fluent-gem install --no-document fluent-plugin-remote_syslog -v 0.3.2 \
   && fluent-gem install --no-document fluent-plugin-sumologic-mattk42 -v 0.0.4\
+  && fluent-gem install --no-document fluent-plugin-deis-graphite -v 0.1.1\
   && fluent-gem install --no-document influxdb -v 0.3.2 \
   && fluent-gem install --no-document nsq-ruby \
   && fluent-gem install --local /opt/fluentd/deis-output/pkg/fluent-plugin-deis_output-0.1.0.gem \

@@ -1,0 +1,10 @@
+if [ -n "$GRAPHITE_URL" ]
+then
+
+cat << EOF >> $FLUENTD_CONF 
+<store>
+  @type deis-graphite
+  graphite_url $GRAPHITE_URL
+</store>
+EOF
+fi
